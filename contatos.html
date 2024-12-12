@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssgabi/contatos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+    <title>Inova mídia- Contatos</title>
+    <script src="https://kit.fontawesome.com/eacdfb59f8.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="imggabi/inovaaa_esse.png"> 
+</head>
+
+<body>
+    <header> 
+        <img src="imggabi/inovaaa_esse.png" alt="Logo Inova Mídia" >
+        <nav id="menu"> 
+            <ul>
+                <li> 
+                    <i class="fa-solid fa-house" style="color: #ffde59;"> </i>
+                    <a href="index.html" > Home </a> 
+                </li> 
+                <li> <a href="qm somos.html" > Quem Somos </a> </li>
+                <li> <a href="servico.html" > Serviços </a> </li>
+                <li> <a href="MKT_NOVO_CLIENTES.html" > Clientes </a> </li>
+                <li> <a href="feedback.html" > Feedbacks </a> </li>
+                <li> <a href="MKT_NOVO_BLOG.html" > Blog </a> </li>
+            </ul>
+        </nav>
+        <div class="contato">
+            <i class="fa-solid fa-phone" style="color: #044aa8; margin-right: 10px;"></i>
+            <a href="contatos.html" class="sem"> Entre Em Contato </a>
+        </div> 
+    </header>
+    <div class="contato2">
+    <div class="contato3">
+    <h1>ENTRE EM CONTATO COM A GENTE</h1>
+    <P>Os próximos passos para o crescimento da sua empresa!
+        Após preencher o formulário, seguiremos com as etapas a seguir:
+    </P>
+    <h4>Conhecer seu negócio</h4>
+    <p>
+        No nosso primeiro contato, vamos entender melhor a sua empresa, analisar a concorrência e compreender a fundo seus objetivos.
+    </p>
+    <h4>Elaborar uma estratégia</h4>
+    <p>
+        Com as informações coletadas, nosso especialista irá compilar os dados e criar uma estratégia personalizada para impulsionar o crescimento da sua empresa por meio dos canais digitais.
+    </p>
+    <h4>Proposta de Resultados</h4>
+    <p>
+        Com base na estratégia desenvolvida, apresentaremos uma proposta que atenderá às necessidades da sua empresa, incluindo ações, custos, cronograma e uma visão detalhada de como será a parceria com a Inova mídia.
+    </p>
+    </div>
+
+    <div class="container mt-5"> <!--vai puxar a class do bootstrap-->
+       <!-- <h1 class="text-center mb-4">Entre em contato:</h1> -->
+
+        <form action="https://formspree.io/f/xanyzjeo"
+        method="POST">
+            <div class="mb-3">
+                <label for="name"class="form-label">Nome completo</label>
+                <input type="text" class="form-control" placeholder="Digite seu nome completo" name="fullname">
+            </div>
+            <div>
+                <label for="email"class="form-label">Qual é seu email corporativo?</label>
+                <input type="email" class="form-control" placeholder="Digite seu email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefone"class="form-label">Qual seu telefone para contato?</label>
+                <input type="text" class="form-control" placeholder="(XX) XXXXX-XXXX" name="telefone" required>
+            </div>
+            <div class="mb-3">
+                <label for="empresa"class="form-label">Empresa:</label>
+                <input type="text" class="form-control" placeholder="Digite o nome da sua empresa" name="empresa" required>
+            </div>
+            <div class="mb-3">
+                <label for="ajudar"class="form-label">Como podemos ajudar sua empresa? </label>
+                <input type="text" class="form-control" placeholder="Digite como podemos te ajudar" name="serviço" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="botao2"><p>Solicitar contato</p></button>
+       
+        </form>
+    </div>
+    <script scr="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+    </div>
+
+<footer>
+    <div class="rodape">
+    <ul>
+        <li class="sem_lista"> <p> © 2024 Inova Mídia Comunicação </p> </li>
+        <li class="sem_lista"> <p> Todos os direitos reservados para a desenvolvedora </p> </li>
+        <li class="sem_lista"> <p> GABRIELLE </p> </li> <!-- COLOCAR O SEU NOME -->
+    </ul>
+    </div>
+    <div> <img src="imggabi/inovaaa_esse.png" alt="Logo Inova Mídia"> </div>
+    <form action="https://formspree.io/f/xyzypgjr" method="POST" class="box">
+        <input class="txt" type="text" name="suggestion" placeholder="Escreva Aqui Suas Sugestões..." required>
+        <button type="submit" class="btn"> 
+            <i class="fa-solid fa-envelope"></i>
+        </button>
+    </form>
+</footer>
+
+</body>
+</html>

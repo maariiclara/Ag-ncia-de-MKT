@@ -1,0 +1,434 @@
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+}
+
+body{
+    background-color: #c0bad2; /* #1d1d1d rgb(27, 25, 25) cor do fundo */ 
+    font-family: 'Times New Roman', Times, serif; /* tipo da fonte */ 
+    font-size: 20px; /* tamanho da fonte */ 
+    font-style: normal; /* estilo da fonte */ 
+}
+   
+header{
+    background-color: #044aa8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: sticky; /* Faz o cabeçalho grudar no topo ao rolar */
+    z-index: 1000; /* Garante que o cabeçalho fique acima do conteúdo */
+}
+    
+header img{ /* Definições da imagem que estão dentro do cabeçalho */
+    width: 250px; /* Largura da imagem */
+    height: 100px; /* Altura da imagem */
+    margin: 10px; /* Margem da imagem */
+    margin-left: 20px;
+}
+
+#menu ul{ /* ID para lista */
+    list-style: none; /* Sem nenhum estilo na lista, tira os pontos */
+    margin-right: 272px;
+    align-items: center;
+}
+
+#menu ul li i{ 
+    margin-right: 5px; /* Adiciona um espaçamento à direita do ícone */
+}
+
+#menu ul li { 
+    display: flex; /* Transforma o li em um container flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-top: -50px;
+  }
+    
+#menu li{
+    position: relative; /* Posição relativa do item da lista */
+}
+    
+#menu li a{ 
+    color: #ffde59; /* Cor do texto do menu */
+    text-decoration: none; /* Sem estilo no texto */
+    padding: 10px 10px; /* Espaçamento entre os textos no Menu */
+    display: block; /* Opções do menu bloqueadas na posição atual */
+}
+
+/* ALTEREI AS CORES */
+#menu li a:hover{ /* trocar a cor do fundo, quando passar o mouse */
+    background: #ffde59; /* #cc3137 Fundo do efeito */
+    color: #044aa8; /* #fff Cor do texto no fundo */
+    text-shadow: 0px 0px 5px white; /* black Sombra do efeito */
+    border-radius: 10px;
+}
+    
+#menu li ul{
+    position: absolute;
+    top: 25px; /* Espaçamento do topo */
+    left: 0; /* Espaçamento da esquerda */
+    background-color: #fff;
+    display: none;
+    border-radius: 10px;
+}
+    
+menu li:hover ul, #menu li.over ul{
+    display: block; /* Durante o efeito não moverá o menu */
+}
+    
+header, #menu, #menu ul{
+    display: flex;
+}
+    
+footer{
+    background-color: #044aa8;
+    display: flex; /* Utiliza flexbox para organizar os elementos */
+    justify-content: space-between; /* flex-end Alinha os elementos para o final da linha */
+    align-items: center; /* Alinha os elementos verticalmente ao centro */
+    padding: 10px; /* Adiciona um espaçamento interno */
+}
+    
+footer img{
+    width: 250px;
+    height: 100px;
+}
+    
+footer p{
+    color: white; /* #ffde59 */
+    margin-right: 20px; /* Espaçamento entre o texto e a imagem */
+    font-family: 'Times New Roman', Times, serif; /* tipo da fonte */ 
+    font-size: 20px; /* tamanho da fonte */ 
+    font-style: normal; /* estilo da fonte */ 
+    text-align: center;
+}
+
+.rodape{
+    text-align: left;
+    margin-left: 12px; /* 16.5 */
+}
+
+#menu{
+    list-style: none;
+    margin: 0 auto; /* Centraliza horizontalmente o menu */
+    margin-top: 45px; /* Ajusta a margem superior */
+}
+
+.lupa{
+    margin-top: 45px;
+    margin-right: 25px;
+}
+
+.search-box { /* Barra de pesquisa */
+    position: absolute; 
+    margin-top: 60px; 
+    margin-left: 1127px; 
+    transform: translate(-50%, -50%); /* Centraliza horizontal e verticalmente */
+    background: #fff; 
+    height: 40px; 
+    border-radius: 40px;
+    padding: 10px; 
+}
+
+.search-btn { /* Botão de busca */
+    color: #044aa8;
+    float: right; 
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    background: #fff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    transition: 2s; 
+}
+
+.search-txt { /* Texto para pesquisa */
+    border: none; 
+    background: none; 
+    outline: none; 
+    float: left; 
+    padding: 0; 
+    color: white; 
+    font-size: 16px; 
+    transition: 0.4s; 
+    line-height: 40px; 
+    width: 0px; 
+}
+
+.search-box:hover > .search-txt { /* Expandir */
+    width: 85px; 
+    padding: 2px;
+}
+
+.search-box:hover > .search-btn { 
+    background: #c0bad2; 
+}
+
+.img{
+    width: 150px; 
+    height: 40px;
+}
+
+.contato{
+    position: absolute; 
+    margin-top: 60px; 
+    margin-left: 1150px; 
+    transform: translate(-50%, -50%); 
+    background: #fff; 
+    height: 40px; 
+    border-radius: 6px;
+    padding: 5px; 
+    
+    color: #044aa8; 
+    float: right; 
+    width: 200px; 
+    height: 40px; 
+    border-radius: 6px; 
+    background: #fff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: left;
+    transition: 2s; 
+}
+
+.tele {
+    margin-top: 60px; 
+    margin-left: 1300px; 
+}
+
+.sem {
+    text-decoration: none;
+}
+
+.box { /* Barra de pesquisa rodapé */
+    position: absolute; 
+    margin-top: 60px; 
+    margin-left: 750px; 
+    transform: translate(-50%, -50%); 
+    background: #ffde59; 
+    height: 40px; 
+    border-radius: 40px; 
+    padding: 10px; 
+    width: 560px;
+}
+
+.textooo {
+    color: white; /* #ffde59 */
+    margin-right: 20px; /* Espaçamento entre o texto e a imagem */
+    font-family: 'Times New Roman', Times, serif; /* tipo da fonte */ 
+    font-size: 20px; /* tamanho da fonte */ 
+    font-style: normal; /* estilo da fonte */ 
+    text-align: center;
+}
+
+.btn { /* Botão de busca rodapé */
+    color: #fff; 
+    float: right; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background: #044aa8; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 2s; 
+}
+
+.txt { /* Texto para pesquisa rodapé */
+    border: none; 
+    background: none; 
+    outline: none; 
+    float: left; 
+    padding: 0; 
+    color: black; 
+    font-size: 16px; 
+    line-height: 40px; 
+    width: 0px; 
+    width: 520px; 
+    flex: 1;
+}
+
+.sem_lista {
+    list-style: none; /* Remove marcadores da lista */
+}
+
+/* PARTE PARA SEREM EDITADAS INDIVIDUALMENTE */
+
+
+/* Seção Principal */
+main {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    border-radius: 0px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        color: #044aa8;
+        text-transform: uppercase;
+
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 15px;
+}
+
+/* Seção História */
+#historia {
+    margin-top: 20px;
+    background: #ffffff;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.historia-titulo h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #044aa8;
+    text-transform: uppercase;
+}
+
+.historia-conteudo p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Efeitos de hover e transições */
+
+
+h1:hover, .historia-titulo h2:hover {
+    color: #044aa8;
+}
+
+p {
+    transition: color 0.3s ease;
+}
+
+p:hover {
+    color: #044aa8;
+}
+
+
+/* Container da Imagem */
+.team-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/* Imagem do Time */
+.team-image {
+    max-width: 100%;
+    height: auto;
+    width: 350px; /* Definir um tamanho padrão para a imagem */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-image:hover {
+    transform: scale(1.05); /* Efeito de zoom suave */
+}
+
+table {
+    width: 85%;
+    margin: 40px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+    box-shadow: 0 12px 35px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    transform: scale(0.98);
+    transition: transform 0.3s ease-in-out;
+}
+
+table:hover {
+    transform: scale(1);
+}
+
+th, td {
+    padding: 20px 30px;
+    text-align: left;
+    font-size: 1.1em;
+    color: rgb(0, 0, 0);
+}
+
+th {
+    background-color: #000000;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #fff;
+    transition: background-color 0.3s ease;
+}
+
+td:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+td ul {
+    list-style: none;
+    padding-left: 0;
+    color: #000000;
+}
+
+td ul li {
+    margin-bottom: 10px;
+}
+
+td ul li::before {
+    content: "✔";
+    margin-right: 10px;
+    color: #216f42;
+    font-weight: bold;
+}
+
+tr {
+    transition: transform 0.2s ease;
+}
+
+tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .historia-titulo h2 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}

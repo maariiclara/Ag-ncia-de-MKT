@@ -1,0 +1,952 @@
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #c0bad2; /* #1d1d1d rgb(27, 25, 25) cor do fundo */ 
+    font-family: 'Times New Roman', Times, serif; /* tipo da fonte */ 
+    font-size: 20px; /* tamanho da fonte */ 
+    font-style: normal; /* estilo da fonte */ 
+}
+   
+header{
+    background-color: #044aa8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+    
+header img{ /* Definições da imagem que estão dentro do cabeçalho */
+    width: 250px; /* Largura da imagem */
+    height: 100px; /* Altura da imagem */
+    margin: 10px; /* Margem da imagem */
+    margin-left: 20px;
+}
+
+#menu ul{ /* ID para lista */
+    list-style: none; /* Sem nenhum estilo na lista, tira os pontos */
+    margin-right: 272px;
+    align-items: center;
+}
+
+#menu ul li i{ 
+    margin-right: 5px; /* Adiciona um espaçamento à direita do ícone */
+}
+
+#menu ul li { 
+    display: flex; /* Transforma o li em um container flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-top: -50px;
+  }
+    
+#menu li{
+    position: relative; /* Posição relativa do item da lista */
+}
+    
+#menu li a{ 
+    color: #ffde59; /* Cor do texto do menu */
+    text-decoration: none; /* Sem estilo no texto */
+    padding: 10px 10px; /* Espaçamento entre os textos no Menu */
+    display: block; /* Opções do menu bloqueadas na posição atual */
+}
+
+/* ALTEREI AS CORES */
+#menu li a:hover{ /* trocar a cor do fundo, quando passar o mouse */
+    background: #ffde59; /* #cc3137 Fundo do efeito */
+    color: #044aa8; /* #fff Cor do texto no fundo */
+    text-shadow: 0px 0px 5px white; /* black Sombra do efeito */
+    border-radius: 10px;
+}
+    
+#menu li ul{
+    position: absolute;
+    top: 25px; /* Espaçamento do topo */
+    left: 0; /* Espaçamento da esquerda */
+    background-color: #fff;
+    display: none;
+    border-radius: 10px;
+}
+    
+menu li:hover ul, #menu li.over ul{
+    display: block; /* Durante o efeito não moverá o menu */
+}
+    
+header, #menu, #menu ul{
+    display: flex;
+}
+    
+footer{
+    background-color: #044aa8;
+    display: flex; /* Utiliza flexbox para organizar os elementos */
+    justify-content: space-between; /* flex-end Alinha os elementos para o final da linha */
+    align-items: center; /* Alinha os elementos verticalmente ao centro */
+    padding: 10px; /* Adiciona um espaçamento interno */
+}
+    
+footer img{
+    width: 250px;
+    height: 100px;
+}
+    
+footer p{
+    color: white; /* #ffde59 */
+    margin-right: 20px; /* Espaçamento entre o texto e a imagem */
+    font-family: 'Times New Roman', Times, serif; /* tipo da fonte */ 
+    font-size: 20px; /* tamanho da fonte */ 
+    font-style: normal; /* estilo da fonte */ 
+    text-align: center;
+}
+
+.rodape{
+    text-align: left;
+    margin-left: 12px; /* 16.5 */
+}
+
+#menu{
+    list-style: none;
+    margin: 0 auto; /* Centraliza horizontalmente o menu */
+    margin-top: 45px; /* Ajusta a margem superior */
+}
+
+.lupa{
+    margin-top: 45px;
+    margin-right: 25px;
+}
+
+.search-box { /* Barra de pesquisa 1127*/
+    position: absolute; 
+    margin-top: 60px; 
+    margin-left: 750px; 
+    transform: translate(-50%, -50%); /* Centraliza horizontal e verticalmente */
+    /* background: #fff; */
+    background: #ffde59;
+    height: 55px; 
+    border-radius: 40px;
+    padding: 10px; 
+}
+
+.search-btn { /* Botão de busca */
+    color: #044aa8;
+    float: right; 
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    background: #fff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    transition: 2s; 
+}
+
+.search-txt { /* Texto para pesquisa */
+    border: none; 
+    background: none; 
+    outline: none; 
+    float: left; 
+    padding: 0; 
+    color: white; 
+    font-size: 16px; 
+    transition: 0.4s; 
+    line-height: 40px; 
+    width: 0px; 
+}
+
+.search-box:hover > .search-txt { /* Expandir */
+    width: 90px; 
+    padding: 2px;
+}
+
+.search-box:hover > .search-btn { 
+    background: #c0bad2; 
+}
+
+.img{
+    width: 150px; 
+    height: 40px;
+}
+
+.contato{
+    position: absolute; 
+    margin-top: 60px; 
+    margin-left: 1150px; 
+    transform: translate(-50%, -50%); 
+    background: #fff; 
+    height: 40px; 
+    border-radius: 6px;
+    padding: 5px; 
+    
+    color: #044aa8; 
+    float: right; 
+    width: 200px; 
+    height: 40px; 
+    border-radius: 6px; 
+    background: #fff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: left;
+    transition: 2s; 
+}
+
+.tele {
+    margin-top: 60px; 
+    margin-left: 1300px; 
+}
+
+.sem {
+    text-decoration: none;
+}
+
+.box { /* Barra de pesquisa rodapé */
+    position: absolute; 
+    margin-top: 60px; 
+    margin-left: 750px; 
+    transform: translate(-50%, -50%); 
+    background: #ffde59; 
+    height: 40px; 
+    border-radius: 40px; 
+    padding: 10px; 
+    width: 560px;
+}
+
+.btn { /* Botão de busca rodapé */
+    color: #fff; 
+    float: right; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background: #044aa8; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: 2s; 
+}
+
+.txt { /* Texto para pesquisa rodapé */
+    border: none; 
+    background: none; 
+    outline: none; 
+    float: left; 
+    padding: 0; 
+    color: black; 
+    font-size: 16px; 
+    line-height: 40px; 
+    width: 0px; 
+    width: 520px; 
+    flex: 1;
+}
+
+.sem_lista {
+    list-style: none; /* Remove marcadores da lista */
+}
+
+/* PARTE PARA SEREM EDITADAS INDIVIDUALMENTE */
+
+.nomee {
+    align-items: center;
+    text-align: center;
+    font-size: 36px;
+    font-style: italic;
+    margin-top: 150px;
+    margin-left: auto;
+    border: black;
+}
+
+.sub {
+    align-items: center;
+    text-align: center;
+    font-size: 23px;
+    font-style: italic;
+    margin-top: 10px;
+    margin-left: auto;
+    border: black;
+}
+
+.marca1 {
+    background-color: #6d626a;
+    border-radius: 30px;
+    padding: 30px;
+    width: 1100px;
+    margin-left: 125px;
+    font-size: 23px;
+    font-style: italic;
+    margin-top: 36px;
+    border: black;
+}
+
+.img_marca {
+    height: 200px;
+    width: 200px;
+}
+
+.esse {
+    margin-left: 843px;
+}
+
+.nome{
+    margin-left: 350px;
+    margin-right: 130px;
+    font-size: 26px;
+    text-align: center;
+    font-style: italic;
+    border: black;
+    margin-top: -230px;
+}
+
+.texto{
+    margin-left: 360px;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 10px;
+    margin-right: 130px;
+    text-align: center;
+    border: black;
+    padding: 10px;
+}
+
+.top1{
+    margin-left: 385px;
+    align-items: center;
+    margin-right: 695px;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 25px;
+    border: black; 
+}
+
+.top2{
+    margin-left: 655px;
+    margin-right: 425px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: -40px;
+    border: black;
+}
+
+.top3{
+    margin-left: 925px;
+    margin-right: 155px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    border: black; 
+    margin-top: -40px;
+}
+
+.marca2 {
+    background-color: #6d626a;
+    border-radius: 30px;
+    padding: 30px;
+    width: 1100px;
+    margin-left: 125px;
+    font-size: 23px;
+    font-style: italic;
+    margin-top: 100px;
+    border: black;
+}
+
+.nome2 {
+    margin-left: 350px;
+    margin-right: 130px;
+    font-size: 26px;
+    text-align: center;
+    font-style: italic;
+    border: black;
+    margin-top: -230px;
+}
+
+.texto2 {
+    margin-left: 350px;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 10px;
+    margin-right: 130px;
+    text-align: center;
+    border: black;
+}
+
+.top1_2 {
+    margin-left: 385px;
+    align-items: center;
+    margin-right: 695px;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 25px;
+    border: black; 
+}
+
+.top2_2 {
+    margin-left: 655px;
+    margin-right: 425px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: -40px;
+    border: black;
+}
+
+.top3_2 {
+    margin-left: 925px;
+    margin-right: 155px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    border: black; 
+    margin-top: -40px;
+}
+
+.marca3 {
+    background-color: #6d626a;
+    border-radius: 30px;
+    padding: 30px;
+    width: 1100px;
+    margin-left: 100px;
+    font-size: 23px;
+    font-style: italic;
+    margin-top: 60px;
+    border: black;
+}
+
+.top2_3 {
+    margin-left: 655px;
+    margin-right: 425px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: -65px;
+    border: black;
+}
+
+.top3_3 {
+    margin-left: 925px;
+    margin-right: 155px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    border: black; 
+    margin-top: -40px;
+}
+
+
+.marca2_outro {
+    background-color: #6d626a;
+    border-radius: 30px;
+    padding: 30px;
+    width: 1100px;
+    margin-left: 125px;
+    font-size: 23px;
+    font-style: italic;
+    margin-top: 76px;
+    border: black;
+}
+
+
+.nome2_outro {
+    margin-right: 350px;
+    margin-left: 130px;
+    font-size: 26px;
+    text-align: center;
+    font-style: italic;
+    border: black;
+    margin-top: -230px;
+}
+
+.texto2_outro {
+    margin-right: 350px;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 10px;
+    margin-left: 130px;
+    text-align: center;
+    border: black;
+}
+
+.espaco {
+    padding: 8px;
+}
+
+.top1_2_outro {
+    margin-right: 385px;
+    align-items: center;
+    margin-left: 695px;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 25px;
+    border: black; 
+}
+
+.top2_2_outro {
+    margin-right: 655px;
+    margin-left: 425px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: -40px;
+    border: black;
+}
+
+.top3_2_outro {
+    margin-right: 925px;
+    margin-left: 155px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    border: black; 
+    margin-top: -40px;
+}
+
+.marca2_outro_vol {
+    background-color: #6d626a;
+    border-radius: 30px;
+    padding: 30px;
+    width: 1100px;
+    margin-left: 100px;
+    font-size: 23px;
+    font-style: italic;
+    margin-top: 80px;
+    border: black;
+}
+
+.top2_2_outro_vol {
+    margin-right: 655px;
+    margin-left: 425px;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: -40px;
+    border: black;
+}
+
+.dados {
+    background-color: #ff6f61;
+    margin-top: 170px;
+    height: 300px;
+}
+
+.section {
+    width: 500px;
+    margin: 50px auto;
+}
+
+.td {
+    margin-top: 10px;
+    width: 300px;
+    height: 300px;
+    perspective: 700px;
+    margin: 50px auto;
+    z-index: 15;
+}
+
+.img_marcaa{
+    width: 300px;
+    height: 300px;
+}
+
+.oi {
+    margin-top: -10px;
+    font-size: 26px;
+}
+
+.frente, .costas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: 700ms;
+}
+
+.frente {
+    background-color: #ffde59;
+    z-index: 1;
+}
+
+.costas {
+    background-color: #ffde59;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    text-align: center;
+    align-items: center;
+    padding-top: 45px;
+    padding-left: 20px;
+    align-self: auto;
+}
+
+.td:hover .frente {
+    transform: rotateY(180deg);
+    z-index: 0;
+}
+
+.td:hover .costas {
+    transform: rotateY(0);
+    z-index: 1;
+}
+
+table {
+    padding: 13px;
+    align-items: center;
+    margin-top: -50px;
+}
+
+table tr td {
+    padding: 13px;
+}
+
+.esp {
+    margin-top: -95px;
+}
+
+.p1 {
+    width: 1050px;
+    height: 400px;
+    margin-top: 150px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin-left: 150px;
+    border-radius: 20px;
+}
+
+.p2 {
+    width: 500px;
+    height: 300px;
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin-left: 150px;
+    border-radius: 20px;
+}
+
+.p3 {
+    width: 500px;
+    height: 300px;
+    margin-top: -300px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin-left: 700px;
+    border-radius: 20px;
+}
+
+.p4 {
+    width: 700px;
+    height: 800px;
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin-left: 150px;
+    border-radius: 20px;
+}
+
+.p5 {
+    width: 300px;
+    height: 100px;
+    margin-top: -800px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin-left: 900px;
+    border-radius: 20px;
+}
+
+.p6 {
+    width: 300px;
+    height: 100px;
+    margin-top: 40px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin-left: 900px;
+    border-radius: 20px;
+}
+
+.p7 {
+    width: 300px;
+    height: 100px;
+    margin-top: 40px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin-left: 900px;
+    border-radius: 20px;
+}
+
+.p8 {
+    width: 300px;
+    height: 100px;
+    margin-top: 40px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin-left: 900px;
+    border-radius: 20px;
+}
+
+.p9 {
+    width: 300px;
+    height: 100px;
+    margin-top: 40px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin-left: 900px;
+    border-radius: 20px;
+}
+
+.p10 {
+    width: 300px;
+    height: 100px;
+    margin-top: 40px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    margin-left: 900px;
+    border-radius: 20px;
+}
+
+.div-slider {
+    z-index: 15;
+    margin-top: 100px;
+    width: 1350px; /* Largura automática */
+    height: 400px; /* Altura do carrossel */
+    text-align: center; /* Centraliza o conteúdo textualmente */
+}
+
+/* Estilo para o contêiner dos slides */
+.slides-front {
+    padding: 0; /* Remove o preenchimento */
+    width: 1300px; /*100% 980 Largura do carrossel */
+    height: 400px; /*70px 370 Altura do carrossel */
+    display: block; /* Exibe o contêiner como bloco */
+    margin: auto; /* Centraliza o contêiner horizontalmente */
+    position: relative; /* Permite posicionamento absoluto dos filhos */
+}
+
+/* Desativa a seleção de texto para todos os elementos dentro de slides-front */
+.slides-front * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Esconde os inputs de controle dos slides */
+.slides-front input {
+    display: none;
+}
+
+/* Estilo para o contêiner dos slides */
+.slide-container {
+    display: block; /* Exibe o contêiner como bloco */
+}
+
+/* Estilo para cada slide */
+.slide {
+    top: 0; /* Posiciona o slide no topo do contêiner */
+    opacity: 0; /* Torna o slide invisível inicialmente */
+    width: 1300px; /* 100% 980 Largura do slide */
+    height: 400px; /*500 Altura do slide */
+    display: block; /* Exibe o slide como bloco */
+    position: absolute; /* Posiciona o slide absolutamente dentro do contêiner */
+    transform: scale(0); /* Inicialmente escala o slide para 0 */
+    transition: all .7s ease-in-out 0.1s; /* Transição suave para todas as propriedades */
+    align-items: center;
+}
+
+/* Estilo para a imagem dentro de cada slide */
+.slide img {
+    width: 1300px; /* Largura da imagem é 100% do slide */
+    height: 400px; /* Altura da imagem é 100% do slide */
+    border-radius: 10px; /* Bordas arredondadas */
+    align-items: center;
+}
+
+/* Estilo para os botões de navegação (setas) */
+.nav label {
+    align-items: center;
+    margin-top: 67px;
+    
+    width: 100px; /*150 Largura dos botões de navegação */
+    height: 50px; /*100% Altura dos botões de navegação */
+    display: none; /* Inicialmente escondido */
+    position: absolute; /* Posiciona o botão absolutamente */
+    opacity: 0; /* Torna o botão invisível */
+    z-index: 9; /* Define a ordem de empilhamento (acima dos slides) */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
+    transition: opacity .2s; /* Transição suave para a opacidade */
+    color: rgb(255, 255, 255); /* Cor do texto dos botões de navegação */
+    font-size: 156pt; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    line-height: 250px; /*480 Altura da linha igual à altura dos botões de navegação */
+    font-family: "Varela Round", sans-serif; /* Fonte dos botões de navegação */
+    background-color: rgba(255, 255, 255, 0); /* Cor de fundo transparente */
+    text-shadow: 0px 0px 15px rgb(119, 119, 119); /* Sombra do texto */
+}
+
+/* Mostra os botões de navegação quando o slide é hover (passa o mouse sobre) */
+.slide:hover + .nav label {
+    opacity: 0.5; /* Torna o botão parcialmente visível */
+}
+
+/* Mostra o botão de navegação quando o mouse passa por cima */
+.nav label:hover {
+    opacity: 1; /* Torna o botão totalmente visível */
+}
+
+/* Posiciona o botão de navegação para avançar slides no lado direito */
+.nav .next {
+    right: 0; /* Alinha à direita */
+}
+
+/* Estilo aplicado aos slides quando o input de controle está checado */
+input:checked + .slide-container .slide {
+    opacity: 1; /* Torna o slide visível */
+    transform: scale(1); /* Restaura a escala do slide para 1 */
+    transition: opacity 1s ease-in-out 0.1s; /* Transição suave para a opacidade */
+}
+
+/* Mostra os botões de navegação quando o input de controle está checado */
+input:checked + .slide-container .nav label {
+    display: block; /* Torna os botões de navegação visíveis */
+}
+
+/* Estilo para os pontos de navegação (indicadores) */
+.nav-dots {
+    width: 100%; /* Largura total do contêiner de pontos */
+    bottom: 9px; /* Posiciona na parte inferior */
+    height: 11px; /* Altura dos pontos */
+    display: block; /*block Exibe o contêiner como bloco */
+    position: relative; /* Posiciona relativamente */
+    text-align: center; /* Centraliza os pontos */
+}
+
+/* Estilo para cada ponto de navegação */
+.nav-dots .nav-dot {
+    top: 370px; /*450 Posiciona os pontos mais abaixo no carrossel */
+    width: 11px; /* Largura dos pontos */
+    height: 11px; /* Altura dos pontos */
+    margin: 0 4px; /* Espaçamento entre os pontos */
+    position: relative; /* Posiciona relativamente */
+    border-radius: 100%; /* Faz os pontos serem circulares */
+    display: inline-block; /* Exibe os pontos em linha */
+    background-color: rgba(0, 0, 0, 0.6); /* Cor de fundo dos pontos */
+}
+
+/* Muda a cor dos pontos quando o mouse passa por cima */
+.nav-dots .nav-dot:hover {
+    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
+    background-color: rgba(0, 0, 0, 5); /* Torna o fundo mais escuro */
+}
+
+/* Muda a cor dos pontos quando o input correspondente está checado */
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5 {
+    background: rgba(0, 0, 0, 5); /* Torna o ponto correspondente mais escuro */
+}
+
+/* Efeito de zoom quando um elemento com a classe 'efeito' é hover */
+.efeito:hover {
+    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
+    transition-duration: 1s; /* Duração da transição */
+    transform: scale(1.3, 1.3); /* Aumenta o tamanho do elemento em 1.3x */
+}
+
+.testee {
+    margin-top: 8px;
+    padding: 40px;
+}
+
+.centro {
+    text-align: center;
+}
+
+.teste {
+    padding-top: 70px;
+}
+
+.botao { 
+    margin-top: 50px; 
+    margin-left: 575px; 
+    background: #044aa8;  
+    border-radius: 6px;
+    padding: 5px; 
+    width: 200px; 
+    height: 40px; 
+    border-radius: 6px; 
+   
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.espa {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.e {
+    padding-top: 30px;
+}
+
+.img_nsei {
+    height: 100px;
+    width: 100px;
+}
+
+.teste2 {
+    padding-top: 20px;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin-top: 130px;
+    padding: 50px;
+    align-items: center;
+    margin: 40 auto;
+    margin-left: 73px;
+}
+.news {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.news h2 {
+    color: #333;
+}
+.news p {
+    color: #555;
+}
+.news a {
+    color: #007BFF;
+    text-decoration: none;
+}
+.news a:hover {
+    text-decoration: underline;
+}
